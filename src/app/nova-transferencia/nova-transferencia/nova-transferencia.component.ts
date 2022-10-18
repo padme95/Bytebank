@@ -22,10 +22,10 @@ export class NovaTransferenciaComponent implements OnInit {
 
   valor: number;
   destino: number;
-
+  
   public transferir(){
     console.log('Transferência Solicitada');
-    const valorEmitir: Transferencia = {valor: this.valor, destino: this.destino };
+    const valorEmitir: Transferencia = {valor: this.valor, destino: this.destino};
 
       this.service.adicionar(valorEmitir).subscribe(
       (resultado) => {
