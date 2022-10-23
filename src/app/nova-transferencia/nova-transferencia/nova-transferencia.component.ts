@@ -22,7 +22,7 @@ export class NovaTransferenciaComponent implements OnInit {
 
   valor: number;
   destino: number;
-  
+
   public transferir(){
     console.log('Transferência Solicitada');
     const valorEmitir: Transferencia = {valor: this.valor, destino: this.destino};
@@ -40,7 +40,5 @@ export class NovaTransferenciaComponent implements OnInit {
     this.valor = 0;
     this.destino = 0;
   }
-
-
 
 }

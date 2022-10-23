@@ -20,11 +20,11 @@ get transferencias() {
   return this.listaTransferencia;
 }
 
-todas(): Observable<Transferencia[]>{
+public todas(): Observable<Transferencia[]>{
   return this.httpClient.get<Transferencia[]>(`${this.url}/transferencias`);
 }
 
-adicionar(transferencia: Transferencia): Observable<Transferencia> {
+public adicionar(transferencia: Transferencia): Observable<Transferencia> {
   this.hidratar(transferencia);
 
   return this.httpClient.post<Transferencia>(`${this.url}/transferencias`, transferencia);
